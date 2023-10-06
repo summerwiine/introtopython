@@ -1,0 +1,46 @@
+
+-- Drop table Global_top if already exists
+If (Exists (select * 
+            from information_schema.tables 
+            where table_name = 'Global_top'))
+Begin
+ Drop Table Global_top
+End
+
+-- Create table Global_top
+
+CREATE TABLE Global_top (
+	[Rank] INT NOT NULL,
+	Company_Name VARCHAR(50) NOT NULL,
+	Country VARCHAR(20) NOT NULL,
+	Revenues INT NOT NULL,
+	Previous_Rank INT NOT NULL,
+	);
+GO
+
+ -- Insert values into table Global_top
+
+INSERT INTO Global_top ([Rank], Company_Name, Country, Revenues, Previous_Rank) 
+VALUES (1, N'Walmart', N'USA', 523964, 1),
+(2, N'Sinopec Group', N'China', 407009, 2),
+(3, N'State Grid', N'China', 383906, 5),
+(4, N'China National Petroleum', N'China', 379130, 4),
+(5, N'Royal Dutch Shell', N'Netherlands', 352106, 3),
+(6, N'Saudi Aramco', N'Saudi Arabia', 329784, 6),
+(7, N'Volkswagen', N'Germany', 282760, 9),
+(8, N'BP', N'United Kingdom', 282616, 7),
+(9, N'Amazon.com', N'USA', 280522, 13),
+(10, N'Toyota Motor', N'Japan', 275288, 10),
+(11, N'Exxon Mobil', N'USA', 264938, 8),
+(12, N'Apple', N'USA', 260174, 11),
+(13, N'CVS Health', N'USA', 256776, 19),
+(14, N'Berkshire Hathaway', N'USA', 254616, 12),
+(15, N'UnitedHealth Group', N'USA', 242155, 14),
+(16, N'McKesson', N'USA', 231051, 17),
+(17, N'Glencore', N'Switzerland', 215111, 16),
+(18, N'China State Construction Engineering', N'China', 205839, 21),
+(19, N'Samsung Electronics', N'South Korea', 197705, 15),
+(20, N'Daimler', N'Germany', 193346, 18)
+
+
+SELECT * FROM Global_top

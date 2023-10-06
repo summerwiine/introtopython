@@ -1,0 +1,39 @@
+
+-- Drop table Winners if already exists
+If (Exists (select * 
+            from information_schema.tables 
+            where table_name = 'Winners'))
+Begin
+ Drop Table Winners
+End
+
+-- Create table Winners
+
+CREATE TABLE Winners (
+    [oscar_no] INT NOT NULL,
+    [oscar_yr] INT NOT NULL,
+	[award] VARCHAR(20) NULL,
+	[name] VARCHAR(20) NULL,
+	[movie] VARCHAR(100) NULL,
+	[age] INT NULL,
+	[birth_pl] VARCHAR(100) NULL,
+	[birth_date] DATE NULL
+   	);
+GO
+
+ -- Insert values into table Winners
+
+INSERT INTO Winners ([oscar_no],[oscar_yr],[award],[name],[movie],[age],[birth_pl],[birth_date]) 
+VALUES (91, 222, N'Best actress', N'Olivia Colman', N'The Favourite', 44, N'England','30-01-1974'),
+(91, 2019, N'Best actor', N'Rami Malek', N'Bohemian Rhapsody', 37, N'California', '12-05-1981'),
+(90, 2018, N'Best actress', N'Frances McDormand', N'Three Billboards Outside of Ebbing Missouri', 60, N'Illinois', '23-06-1957'),
+(90, 2018, N'Best actor', N'Gary Oldman', N'Darkest Hour', 59, N'England', '21-03-1958'),
+(89, 2017, N'Best actress', N'Emma Stone', N'La la Land', 28, N'Arizona', '06-11-1988'),
+(89, 2017, N'Best actor', N'Casey Affleck', N'Manchester by the Sea', 41, N'Massachusetts', '12-08-1975'),
+(88, 2016, N'Best actress', N'Brie Larson', N'Room', 26, N'California', '01-10-1989'),
+(88, 2016, N'Best actor', N'Leonardo Di Caprio', N'The Revenant', 41, N'California', '11-11-1974'),
+(87, 2015, N'Best actress', N'Julianne Moore', N'Still Alice', 54, N'North Carolina', '03-12-1960'),
+(87, 2015, N'Best actor', N'Eddie Redmayne', N'The Theory of Everything', 32, N'England', '06-01-1982')
+
+
+SELECT * FROM Winners

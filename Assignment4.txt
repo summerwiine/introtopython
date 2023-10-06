@@ -1,0 +1,18 @@
+﻿Homework
+1: You are given a Winners table. Write a SQL query that will return you a list of names and movie titles
+2: You are given a Winners table. Write a SQL query that will return you a list of movie titles that start with a vowel (a, e, i, o, u)
+2b: 2: You are given a Winners table. Write a SQL query that will return you a list of movie titles that start with not a vowel (not a, e, i, o, u).
+3: You are given a Winners table. Write a SQL query that will return you a list of movie titles that end with a vowel (a, e, i, o, u). Moreover, your list should not contain duplicates (duplicate values).
+4: You are given a Winners table. Write a SQL query that will return you a list of actor names.
+5: You are given a Winners table. Write a SQL query that will return you a list of English actress names.
+6: You are given a Movies table. Write a SQL query that will return you a list of US directors
+7: You are given a Movies table. Write a SQL query that will return you a list of films made after 2017 (we assume that the film was made in the same year as it was nominated for an Oscar)
+8: You are given a Movies table. Write a SQL query that will return you a list of movies made after 2016 with budgets no more than $ 15 million
+9: You are given a Movies table. Write a SQL query that will return you a list of movies and their budget, directed by a director named Joe Wright
+10: You are given a Global_top500 table. Write a SQL query that will return you a list of US companies
+11: You are given a Global_top500 table. Write a SQL query that will return you a list of non-US companies
+12: You are given a Global_top500 table. Write a SQL query that will return you a list of companies whose current rating is the same as last year's
+13: You are given a US_top500 table. Write a SQL query that will return you a list of companies with a net profit (Profits) of more than 15,000 (ignore the “$” and “,”)
+14: You are given a US_top500 table. Write a SQL query that will return you a list of companies with an even number of the current rating
+15: You are given a US_top500 table. Write a SQL query that will return you a list of companies with a current rating higher than last year
+Note: do not forget that the lower the number, the higher the rating (e.g. rating = 1 higher rating = 4)

@@ -1,0 +1,36 @@
+
+-- Drop table Movies if already exists
+If (Exists (select * 
+            from information_schema.tables 
+            where table_name = 'Winners'))
+Begin
+ Drop Table Movies
+End
+
+-- Create table Movies
+
+CREATE TABLE Movies (
+	movie VARCHAR(50) NOT NULL,
+	oscar_yr INT NOT NULL,
+	director VARCHAR(20) NOT NULL,
+	country VARCHAR(20) NOT NULL,
+	budget INT NOT NULL,
+	);
+GO
+
+ -- Insert values into table Movies
+
+INSERT INTO Movies (movie, oscar_yr, director, country, budget) 
+VALUES (N'The Favourite', 2019, N'Yorgos Lanthimos', N'United Kingdom', 15),
+(N'Bohemian Rhapsody', 2019, N'Bryan Singer', N'United Kingdom' , 55),
+(N'Three Billboards Outside of Ebbing Missouri', 2018, N'Martin McDonagh', N'United States' , 15),
+(N'Darkest Hour', 2018, N'Joe Wright', N'United Kingdom', 30),
+(N'La La Land', 2017, N'Damien Chazelle', N'United States' , 32),
+(N'Manchester by the Sea', 2017, N'Kenneth Lonergan', N'United States' , 9),
+(N'Room', 2016, N'Lenny Abrahamson', N'Canada' , 13),
+(N'The Revenant', 2016, N'Alejandro G Inarritu', N'United States' , 135),
+(N'Still Alice', 2015, N'Richard Glatzer', N'United States' , 4),
+(N'The Theory of Everything', 2015, N'James Marsh', N'United States', 15)
+     
+	 
+SELECT * FROM Movies
