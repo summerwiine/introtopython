@@ -59,4 +59,4 @@ WHERE rank_us % 2 = 0;
 
 -- task15
 SELECT company_name FROM us_top
-WHERE rank_us > previous_rank;
+WHERE rank_us < previous_rank;
