@@ -15,11 +15,12 @@ SELECT DISTINCT(movie) FROM winners
 WHERE movie LIKE '%[a,e,o,i,u]'; 
 
 -- task4
-SELECT name FROM winners;
+SELECT name FROM winners
+where award like '%actor';
 
 -- task5
 SELECT name FROM winners 
-WHERE award = 'Best actress' AND birth_pl = 'England';
+WHERE award like '%actress' AND birth_pl = 'England';
 
 -- task6
 SELECT director FROM movies
